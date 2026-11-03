@@ -47,49 +47,6 @@ setting = {
                 ]
             },
             {
-                'uri': 'jav_censored',
-                'name': 'JAV Cen',
-                'list': [
-                    {'uri': 'setting', 'name': '설정'},
-                    {'uri': 'avdbs', 'name': 'Avdbs'},
-                    {'uri': 'dmm', 'name': 'DMM'},
-                    {'uri': 'mgstage', 'name': 'MGStage'},
-                    {'uri': 'jav321', 'name': 'Jav321'},
-                    {'uri': 'javbus', 'name': 'Javbus'},
-                    {'uri': 'javdb', 'name': 'JavDB'},
-                    {'uri': 'meta_list', 'name': '영상 DB'},
-                    {'uri': 'person_list', 'name': '인물 DB'},
-                    {'uri': 'manual/files/jav_censored.md', 'name': '매뉴얼'},
-                ]
-            },
-            {
-                'uri': 'jav_uncensored',
-                'name': 'JAV Uncen',
-                'list': [
-                    {'uri': 'setting', 'name': '설정'},
-                    {'uri': 'meta_list', 'name': '영상 DB'},
-                    {'uri': 'person_list', 'name': '인물 DB'},
-                ]
-            },
-            {
-                'uri': 'western',
-                'name': 'Western',
-                'list': [
-                    {'uri': 'setting', 'name': '설정'},
-                    {'uri': 'meta_list', 'name': '영상 DB'},
-                    {'uri': 'person_list', 'name': '인물 DB'},
-                ]
-            },
-            {
-                'uri': 'meta_db',
-                'name': '메타 DB',
-                'list': [
-                    {'uri': 'setting', 'name': '설정'},
-                    {'uri': 'av_meta_list', 'name': '영상 DB: AV'},
-                    {'uri': 'av_person_list', 'name': '인물 DB: AV'},
-                ]
-            },
-            {
                 'uri': 'manual',
                 'name': '매뉴얼',
                 'list': [
@@ -117,14 +74,8 @@ try:
     from .mod_ktv import ModuleKtv
     from .mod_movie import ModuleMovie
     from .mod_music_normal import ModuleMusicNormal
-    from .mod_route import ModuleRoute
-    from .mod_jav_censored import ModuleJavCensored
-    from .mod_jav_uncensored import ModuleJavUncensored
-    from .mod_western import ModuleWestern
-    from .mod_meta_db import ModuleMetaDb
-    P.set_module_list([ModuleRoute, ModuleKtv, ModuleMovie, ModuleFtv, ModuleMusicNormal, ModuleBook, ModuleJavCensored, ModuleJavUncensored, ModuleWestern, ModuleMetaDb])
+    P.set_module_list([ModuleKtv, ModuleMovie, ModuleFtv, ModuleMusicNormal, ModuleBook])
 except Exception as e:
     P.logger.error(f'Exception:{str(e)}')
 
 logger = P.logger
-
